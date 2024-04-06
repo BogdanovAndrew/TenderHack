@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 import uvicorn
 
+import service
+
 
 app = FastAPI(title="Tender Hack")
+
+app.include_router(service.router)
 
 @app.get('/')
 def index():
