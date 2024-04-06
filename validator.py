@@ -14,4 +14,4 @@ def correct_req(req: str) -> str:
 
 
 
-print(correct_req("Ноутбука Xyaomi"))
+# print(correct_req("Ноутбука Xyaomi"))

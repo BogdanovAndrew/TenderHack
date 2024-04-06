@@ -1,4 +1,5 @@
 from pymystem3 import Mystem
+# from gensim.models import FastText
 
 
 stemmer = Mystem()
@@ -10,4 +11,4 @@ def stem_req(req: str, remove_prep=False) -> str:
     return "".join(stemmed)
 
 
-print(stem_req("Метлу для уборку"))
+# ft = FastText()
