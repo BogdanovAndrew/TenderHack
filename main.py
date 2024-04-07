@@ -1,9 +1,17 @@
-import validator
-import standarter
+from fastapi import FastAPI
+import uvicorn
+
+from back.service import router as ste_router
 
 
-req = "Мыло жыдкое 220 мл"
+app = FastAPI(title="Tender Hack")
 
-correct_req = standarter.stem_req(validator.correct_req(req))
+app.include_router(ste_router)
 
-print(correct_req)
+@app.get('/')
+def index():
+    return {'msg': 'OK'}
+
+
+if __name__ == '__main__':
+    uvicorn.run(app)
